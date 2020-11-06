@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridView
-        android:id="@+id/gridView_id"
+        android:id="@+id/gridView_pic"
         android:layout_width="0dp"
         android:layout_height="350dp"
         android:layout_marginStart="32dp"
@@ -48,6 +48,6 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridView_id" />
+        app:layout_constraintTop_toBottomOf="@+id/gridView_pic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
