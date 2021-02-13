@@ -17,11 +17,11 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     //宣告變數
-    private int[] imageNumber = {R.drawable.butterfly,R.drawable.cat,R.drawable.flower,
-                                 R.drawable.hippo,R.drawable.monkey,R.drawable.mushroom,
-                                 R.drawable.panda,R.drawable.rabbit,R.drawable.raccoon};
+    private int[] imageNumber = {R.drawable.chair01, R.drawable.chair02, R.drawable.chair03
+                                , R.drawable.chair04, R.drawable.chair05, R.drawable.chair06
+                                , R.drawable.chair07, R.drawable.chair08, R.drawable.chair09};
 
-    private String[] imageName = {"butterfly","cat","flower","hippo","monkey","mushroom","panda","rabbit","raccoon"};
+    private String[] imageName = {"chair 01","chair 02","chair 03","chair 04","chair 05","chair 06","chair 07","chair 08","chair 09"};
     private Context context;
     private GridView gridViewPic;
     private TextView textViewResult;
@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     //找到元件
     private void findViews(){
-
         gridViewPic = (GridView) findViewById(R.id.gridView_pic);
         textViewResult = (TextView) findViewById(R.id.textView_result);
         textViewResult.setText("");
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
     //使用Map打包:先將資料(image & name)放到itemData內
     //再將itemData放到itemList內
     private void putDataIntoList(){
-
         itemList = new ArrayList< Map<String, Object> >();
         for (int i = 0; i<imageNumber.length; i++){
             Map<String, Object> itemData = new HashMap<String, Object>();
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
      7.(不確定)item:將資料透過Position取出:line 84
      */
     private void myGridViewAdaptor(){
-
         MyGridAdaptor adaptor = new MyGridAdaptor(context, itemList);
         gridViewPic.setNumColumns(2);       //將gridView的column數量設為2行
         gridViewPic.setAdapter(adaptor);
